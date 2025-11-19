@@ -1,0 +1,23 @@
+[sqlfluff]
+dialect = postgres
+max_line_length = 120
+exclude_rules = L009,L031
+
+# indentation settings (was rules.L003)
+indentation.tab_space_size = 4
+indentation.indent_unit = space
+
+# keyword capitalisation (was rules.L010)
+capitalisation.keywords.policy = upper
+
+# identifiers capitalisation (was rules.L014)
+capitalisation.identifiers.policy = lower
+
+# we use Jinja templater only if needed
+templater = jinja
+
+# ----- EXTENSION: nullable comments validation -----
+# Custom rule via regex: nullable fields must have explicit comment
+# Example: -- Nullable: reason
+require_nullable_comment = true
+nullable_comment_regex = (?i).*Nullable\:.+

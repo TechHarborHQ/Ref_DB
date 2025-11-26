@@ -43,7 +43,6 @@ Thumbs.db
 # Database dumps / backups
 # (если понадобится экспортировать — лучше в releases)
 # -----------------------
-*.sql
 *.dump
 *.backup
 

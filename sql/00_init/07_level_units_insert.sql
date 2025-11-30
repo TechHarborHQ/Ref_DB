@@ -2,6 +2,8 @@
 -- Сгенерировано из файла 07_level_units_01.xlsx
 -- Всего строк: 317
 
+SET search_path TO ref;
+
 INSERT INTO level_units (country_id, type_unit_id, hierarchy_level, is_active)
 SELECT c.id, t.id, 1, NULL
 FROM countries c
